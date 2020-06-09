@@ -1,0 +1,33 @@
+version: '2'
+services:
+    php:
+        container_name: apicomposer-php
+        image: apicomposer-php
+        build: ./php
+        links:
+          - db
+        volumes:
+            - ${APP_DIR}:/home/app:cached
+        network_mode: bridge
+    web:
+        container_name: apicomposer-web
+        image: apicomposer-web
+        build: ./web
+        links:
+            - php
+        volumes_from:
+            - php
+        ports:
+            - "80:80"
+        network_mode: bridge
+    db:
+        container_name: apicomposer-db
+        image: mariadb:10.1
+        volumes:
+            - ${APP_DB}:/var/lib/mysql
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        network_mode: bridge
+
+
+
