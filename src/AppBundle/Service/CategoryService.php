@@ -45,7 +45,7 @@ class CategoryService
     public function getAllCategories()
     {
 
-        $categories = $this->em->getRepository("App:Category")->findAll();
+        $categories = $this->em->getRepository("AppBundle:Category")->findAll();
         return $categories;
     }
 
@@ -55,7 +55,7 @@ class CategoryService
         $name = $request->request->get("name", null);
         $description = $request->request->get("description", null);
 
-        $category = $this->em->getRepository("App:Category")->find($id);
+        $category = $this->em->getRepository("AppBundle:Category")->find($id);
 
         if (!is_null($category)) {
             if (!is_null($name) && $name != '') {
@@ -77,8 +77,8 @@ class CategoryService
 
     public function deleteCategory($id)
     {
-        $category = $this->em->getRepository("App:Category")->find($id);
-        $categoryrelatedwithproducts = $this->em->getRepository("App:Product")->findByCategory($id);
+        $category = $this->em->getRepository("AppBundle:Category")->find($id);
+        $categoryrelatedwithproducts = $this->em->getRepository("AppBundle:Product")->findByCategory($id);
 
         if (is_null($category)) {
             $message = "An error has occurred trying to remove the currrent category - Error: The category id does not exist";

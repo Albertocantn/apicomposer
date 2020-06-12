@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9579941-a3a4-4f4e-9aa0-0b38432834aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/apicomposer3.4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/apicomposer3.4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/aria_log.00000001" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/aria_log.00000001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/aria_log_control" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/aria_log_control" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/mysql/db.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/mysql/db.MYD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/mysql/db.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/mysql/db.MYI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/mysql/innodb_table_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/mysql/user.MYD" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/mysql/user.MYD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/_db/mysql/user.MYI" beforeDir="false" afterPath="$PROJECT_DIR$/docker/_db/mysql/user.MYI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/local/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/local/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Service/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Service/CategoryService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591630957422</updated>
-      <workItem from="1591630959906" duration="17711000" />
+      <workItem from="1591630959906" duration="18565000" />
     </task>
     <servers />
   </component>

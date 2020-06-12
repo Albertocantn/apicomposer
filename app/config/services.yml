@@ -35,6 +35,11 @@ services:
             $em : '@doctrine.orm.default_entity_manager'
             $requestStack : '@request_stack'
 
+    AppBundle\Service\CategoryService:
+        public: true
+        arguments:
+            $em: '@doctrine.orm.default_entity_manager'
+            $requestStack: '@request_stack'
     AppBundle\Service\ChangeCurrencyService:
         public: true
 
