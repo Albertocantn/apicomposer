@@ -5,20 +5,18 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Product;
 use GuzzleHttp\Client;
 
-
 class ChangeCurrencyService
 {
 
-
     public function getEURValueFromUSD()
     {
-        $client =  new Client();
+        $client = new Client();
         $response = $client->request('GET', 'https://api.exchangeratesapi.io/latest?base=USD&symbols=EUR');
         $contents = json_decode($response->getBody(), true);
         $EURPriceFromUSD = $contents['rates'][Product::EUR];
+
         return $EURPriceFromUSD;
     }
-
 
     public function getUSDValueFromEUR()
     {
@@ -26,6 +24,7 @@ class ChangeCurrencyService
         $response = $client->request('GET', 'https://api.exchangeratesapi.io/latest?base=EUR&symbols=USD');
         $contents = json_decode($response->getBody(), true);
         $USDPriceFromEUR = $contents['rates'][Product::USD];
+
         return $USDPriceFromEUR;
     }
 
@@ -45,8 +44,8 @@ class ChangeCurrencyService
 
             }
 
-
         }
+
         return $products;
     }
 }

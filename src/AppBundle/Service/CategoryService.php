@@ -6,7 +6,6 @@ use AppBundle\Entity\Category;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-
 class CategoryService
 {
     private $em;
@@ -25,7 +24,6 @@ class CategoryService
         $name = $request->request->get("name", null);
         $description = $request->request->get("description", null);
 
-
         if (!is_null($name) && $name != '') {
             $category = new Category();
             $category->setName($name);
@@ -33,11 +31,12 @@ class CategoryService
 
             $this->em->persist($category);
             $this->em->flush();
-            return $category;
 
+            return $category;
 
         } else {
             $message = "An error has occurred trying to add new category - Error: You must to provide a category name";
+
             return $message;
         }
     }
@@ -46,6 +45,7 @@ class CategoryService
     {
 
         $categories = $this->em->getRepository("AppBundle:Category")->findAll();
+
         return $categories;
     }
 
@@ -70,8 +70,8 @@ class CategoryService
             $this->em->flush();
 
         }
-        return $category;
 
+        return $category;
 
     }
 
@@ -82,9 +82,9 @@ class CategoryService
 
         if (is_null($category)) {
             $message = "An error has occurred trying to remove the currrent category - Error: The category id does not exist";
+
             return $message;
         }
-
 
         if ($categoryrelatedwithproducts) {
             foreach ($categoryrelatedwithproducts as $product) {
