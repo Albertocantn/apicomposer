@@ -6,6 +6,7 @@ use AppBundle\Entity\Product;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use JMS\Serializer;
+use JMS\Serializer\SerializationContext;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,7 +48,7 @@ class ApiController extends AbstractFOSRestController
             'data' => $code == 200 ? $products : $message,
         ];
 
-        return new Response($serializer->serialize($response, "json"));
+        return new Response($serializer->serialize($response, 'json', SerializationContext::create()->setGroups(array('category'))));
     }
 
     /**

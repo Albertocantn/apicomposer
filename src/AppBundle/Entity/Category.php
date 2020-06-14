@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
 
 /**
  * Category
@@ -20,6 +21,7 @@ class Category
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Groups({"category"})
      */
     private $id;
 
@@ -27,6 +29,7 @@ class Category
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Groups({"category"})
      */
     private $name;
 
@@ -34,6 +37,7 @@ class Category
      * @var string
      *
      * @ORM\Column(name="description", type="text", nullable=true)
+     * @Groups({"category"})
      */
     private $description;
 

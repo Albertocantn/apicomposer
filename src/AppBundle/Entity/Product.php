@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
 
 /**
  * Product
@@ -20,6 +21,7 @@ class Product
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @Groups({"category"})
      */
     private $id;
 
@@ -27,6 +29,7 @@ class Product
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, unique=true)
+     * @Groups({"category"})
      */
     private $name;
 
@@ -34,6 +37,7 @@ class Product
      * @var float
      *
      * @ORM\Column(name="price", type="float")
+     * @Groups({"category"})
      */
     private $price;
 
@@ -41,6 +45,7 @@ class Product
      * @var bool
      *
      * @ORM\Column(name="featured", type="boolean")
+     * @Groups({"category"})
      */
     private $featured;
 
@@ -48,11 +53,13 @@ class Product
      * @var string
      *
      * @ORM\Column(name="currency", type="string", length=3)
+     * @Groups({"category"})
      */
     private $currency;
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category", inversedBy="products")
+     *  @Groups({"category"})
      */
     private $category;
 
